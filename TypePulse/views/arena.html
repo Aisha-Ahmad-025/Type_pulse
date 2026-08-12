@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Arena | TypePulse</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/arena.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<!-- NAVBAR --> 
+<header class="navbar">
+    <div class="logo-area">
+        <div class="logo-icon"> TP </div>
+        <h1 class="logo-text">
+            Type<span>Pulse</span>
+        </h1>
+    </div>
+
+    <div class="arena-status">
+        <span class="status-dot"></span>
+        ANALYSIS MODE
+    </div>
+
+    <a href="index.html" class="exit-arena">
+        Exit Arena
+    </a>
+</header>
+
+<!-- ARENA MAIN -->
+<main class="arena-main">
+
+<!-- ARENA HEADER -->
+<section class="arena-header">
+    <div>
+        <p class="arena-label">
+            TYPING ARENA
+        </p>
+        <h2>
+            Find your
+            <span>rhythm.</span>
+        </h2>
+    </div>
+
+    <div class="session-info">
+        <span>SESSION</span>
+        <strong>#001</strong>
+    </div>
+</section>
+
+<!-- LIVE METRICS -->
+<section class="metrics-grid">
+    <div class="metric-card">
+        <p>TIME</p>
+        <h3 id="timer"> 00:00</h3>
+    </div>
+
+    <div class="metric-card">
+        <p>SPEED</p>
+        <h3>
+            <span id="wpm"> 0 </span>
+            <small> WPM </small>
+        </h3>
+    </div>
+
+    <div class="metric-card">
+        <p>ACCURACY</p>
+        <h3>
+            <span id="accuracy"> 100 </span>
+            <small> % </small>
+        </h3>
+    </div>
+
+    <div class="metric-card rhythm-metric">
+        <p>RHYTHM</p>
+        <h3 id="rhythm-status">WAITING</h3>
+    </div>
+</section>
+
+<!-- TYPING AREA -->
+<section class="typing-section">
+
+    <div class="typing-header">
+        <div>
+            <span class="typing-label">
+                TYPE THE PASSAGE
+            </span>
+            <span class="typing-instruction">
+                Don't overthink it. Just type naturally.
+            </span>
+        </div>
+
+        <button class="reset-btn" id="reset-btn">
+            ↻ Reset
+        </button>
+    </div>
+
+    <!-- TEXT PASSAGE -->
+    <div class="passage-box" id="passage-box">
+        <p id="passage-text">
+            The rhythm of your typing is unique. Some people type in
+            fast bursts, while others pause to think between every
+            sentence. Type naturally and let your rhythm reveal itself.
+        </p>
+    </div>
+
+    <!-- TYPING INPUT -->
+    <textarea
+    id="typing-input"
+    class="typing-input"
+    placeholder="Start typing here..."
+    spellcheck="false"
+    autocomplete="off"></textarea>
+</section>
+
+<!-- LIVE ANALYSIS -->
+<section class="analysis-panel">
+
+    <div class="analysis-title">
+        <span class="typing-label">
+            LIVE ANALYSIS
+        </span>
+        <span class="analysis-state" id="analysis-state">
+            WAITING FOR INPUT
+        </span>
+    </div>
+
+    <div class="analysis-content">
+        <div class="analysis-item">
+            <span>CURRENT FLOW</span>
+            <strong id="current-flow"> — </strong>
+        </div>
+
+        <div class="analysis-item">
+            <span>LAST PAUSE</span>
+            <strong id="last-pause"> — </strong>
+        </div>
+
+        <div class="analysis-item">
+            <span> KEYSTROKES </span>
+            <strong id="keystrokes"> 0 </strong>
+        </div>
+
+        <div class="analysis-item">
+            <span> RHYTHM SCORE  </span>
+            <strong id="rhythm-score"> — </strong>
+        </div>
+    </div>
+</section>
+
+<!-- RESULT SCREEN -->
+<section class="result-screen" id="result-screen">
+
+    <p class="result-label"> SESSION COMPLETE </p>
+    <h2>
+        Your rhythm
+        <span>revealed.</span>
+    </h2>
+
+    <div class="result-grid">
+
+        <div class="result-card">
+            <span>SPEED</span>
+            <strong id="result-wpm"> 0 </strong>
+            <small> WPM </small>
+        </div>
+
+        <div class="result-card">
+            <span> ACCURACY </span>
+            <strong id="result-accuracy"> 0 </strong>
+            <small> % </small>
+        </div>
+
+        <div class="result-card">
+            <span> RHYTHM </span>
+            <strong id="result-rhythm"> — </strong>
+        </div>
+
+        <div class="result-card">
+            <span> SCORE </span>
+            <strong id="result-score"> 0 </strong>
+        </div>
+    </div>
+
+    <!-- TYPING PERSONALITY -->
+    <div class="personality-insight" id="personality-insight">
+
+        <div class="personality-heading">
+            <span class="personality-label">
+                TYPING PERSONALITY
+            </span>
+            <span class="personality-status">
+                BEHAVIOR ANALYZED
+            </span>
+        </div>
+
+        <h3 id="personality-title">
+            Your typing style is being analyzed
+        </h3>
+
+        <p id="personality-description">
+            Complete a session to discover your natural typing personality.
+        </p>
+
+        <div class="personality-tags">
+            <span id="personality-tag-1"> — </span>
+
+            <span id="personality-tag-2"> — </span>
+
+            <span id="personality-tag-3"> — </span>
+        </div>
+    </div>
+
+    <button class="try-again-btn" id="try-again-btn">
+        Try Again
+    </button>
+</section>
+
+</main>
+
+<script src="../js/arena.js"></script>
+</body>
+</html>

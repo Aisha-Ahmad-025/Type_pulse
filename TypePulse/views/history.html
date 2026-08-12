@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | TypePulse</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/history.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo-area">
+        <div class="logo-icon">TP</div>
+        <h1 class="logo-text">
+            Type<span>Pulse</span>
+        </h1>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html"> Home </a>
+        <a href="arena.html"> Arena </a>
+        <a href="history.html" class="active"> History </a>
+    </nav>
+
+    <a href="index.html" class="history-back"> ← Back </a>
+</header>
+
+
+<!-- HISTORY MAIN -->
+<main class="history-main">
+
+<!-- PAGE HEADER -->
+<section class="history-header">
+    <div>
+        <p class="history-label">
+            PERFORMANCE DATA
+        </p>
+        <h2>
+            Your typing
+            <span>history.</span>
+        </h2>
+        <p class="history-description">
+            Every session tells a story.
+            Track your rhythm and watch your progress.
+        </p>
+    </div>
+
+    <div class="session-count">
+        <span> TOTAL SESSIONS </span>
+        <strong id="total-sessions"> 0 </strong>
+    </div>
+
+</section>
+
+<!-- SUMMARY -->
+<section class="history-summary">
+
+    <div class="summary-card">
+        <p> BEST WPM </p>
+        <h3 id="best-wpm"> 0 </h3>
+    </div>
+
+    <div class="summary-card">
+        <p> AVG ACCURACY </p>
+        <h3>
+            <span id="average-accuracy">  0</span>
+            <small> % </small>
+        </h3>
+    </div>
+
+    <div class="summary-card">
+        <p> BEST SCORE </p>
+        <h3 id="best-score"> 0 </h3>
+    </div>
+</section>
+
+<!-- HISTORY SECTION -->
+<section class="history-section">
+
+    <div class="history-section-header">
+        <div>
+            <span class="history-label">
+                SESSION HISTORY
+            </span>
+            <p>
+                Your previous typing sessions
+            </p>
+        </div>
+        <button class="clear-history-btn" id="clear-history-btn">
+            Clear History
+        </button>
+    </div>
+
+    <!-- SESSION LIST -->
+    <div class="session-list" id="session-list">
+        
+        <div class="empty-history" id="empty-history">
+            <div class="empty-icon"> — </div>
+            <h3> No sessions yet </h3>
+            <p>
+                Complete your first typing session to see your progress here.
+            </p>
+
+            <a href="arena.html" class="start-typing-btn">
+                Start Typing
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<script src="../js/history.js"></script>
+</body>
+</html>
